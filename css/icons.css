@@ -25,14 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+._icon-filter:before {
+  content: "\e92b";
+}
 ._icon-mark:before {
   content: "\e92a";
 }
 ._icon-close:before {
   content: "\e900";
-}
-._icon-search-1:before {
-  content: "\e91f";
 }
 ._icon-boss:before {
   content: "\e924";
@@ -43,7 +43,7 @@
 ._icon-car:before {
   content: "\e926";
 }
-._icon-cart-3:before {
+._icon-cart:before {
   content: "\e927";
 }
 ._icon-user:before {
@@ -52,44 +52,8 @@
 ._icon-burger:before {
   content: "\e929";
 }
-._icon-group:before {
-  content: "\e909";
-}
-._icon-zoom-out:before {
-  content: "\e90a";
-}
-._icon-zoom-in:before {
-  content: "\e90b";
-}
-._icon-clock:before {
-  content: "\e90c";
-}
-._icon-cog:before {
-  content: "\e90d";
-}
-._icon-chat:before {
-  content: "\e90e";
-}
-._icon-cart-2:before {
-  content: "\e90f";
-}
-._icon-arrow_down-4:before {
-  content: "\e910";
-}
-._icon-arrow_expand:before {
-  content: "\e911";
-}
-._icon-arrow_left-2:before {
+._icon-arrow_left:before {
   content: "\e912";
-}
-._icon-arrow_left-1:before {
-  content: "\e913";
-}
-._icon-globe-2:before {
-  content: "\e914";
-}
-._icon-flickr:before {
-  content: "\e915";
 }
 ._icon-instagram:before {
   content: "\e916";
@@ -97,47 +61,23 @@
 ._icon-googleplus:before {
   content: "\e917";
 }
-._icon-vimeo:before {
-  content: "\e918";
-}
-._icon-share-1:before {
-  content: "\e919";
-}
 ._icon-pinterest:before {
   content: "\e91a";
 }
 ._icon-facebook:before {
   content: "\e91b";
 }
-._icon-youtube:before {
-  content: "\e91c";
-}
 ._icon-twitter:before {
   content: "\e91d";
 }
-._icon-youtube-1:before {
+._icon-youtube:before {
   content: "\e91e";
 }
-._icon-arrow_condense:before {
-  content: "\e920";
-}
-._icon-arrow-down-3:before {
-  content: "\e921";
-}
-._icon-arrow-down-2:before {
+._icon-arr-down:before {
   content: "\e922";
 }
-._icon-arrow-down-1:before {
+._icon-arrow-down:before {
   content: "\e923";
-}
-._icon-arrow-right:before {
-  content: "\e901";
-}
-._icon-cart-1:before {
-  content: "\e902";
-}
-._icon-favorite:before {
-  content: "\e903";
 }
 ._icon-location:before {
   content: "\e904";
@@ -150,9 +90,6 @@
 }
 ._icon-send:before {
   content: "\e907";
-}
-._icon-share:before {
-  content: "\e908";
 }
 ._icon-mail:before {
   content: "\e945";
