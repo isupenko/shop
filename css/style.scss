@@ -9,8 +9,8 @@ $fontSize: 14;
 
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
 $minWidth: 320px;
-$maxWidth: 1440;
-$maxWidthContainer: 1270;
+$maxWidth: 1600;
+$maxWidthContainer: 1140;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -129,6 +129,7 @@ body {
 	max-width: $maxWidthContainer + px;
 	padding: 0 15px;
 	margin: 0 auto;
+	//border: 1px solid #222222;
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -274,6 +275,264 @@ textarea.input {
 //</Стили обьектов>==================================================================================
 
 //============================== header ====================================
+.header {
+	width: 100%;
+	height: 75px;
+	//position: absolute;
+	background: #222222;
+	//margin: 0 auto;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 75px;
+	}
+
+	&__box {
+		display: flex;
+	}
+
+	&__search {
+		font-size: 32px;
+		color: #e8e8e8;
+		margin-left: 25px;
+	}
+
+	&__user {
+		font-size: 28px;
+		color: #e8e8e8;
+		margin-left: 33px;
+	}
+
+	&__cart {
+		
+	}
+
+	&__menu {
+		
+	}
+}
+
+.logo {
+	padding: 15px 15px 15px 3px;
+	margin-top: -5px;
+}
+
+.logo__img {
+	
+}
+
+.menu {
+	font-size: 24px;
+	color: #e8e8e8;
+	//margin-left: 40px;
+}
+.cart-header {
+	&__icon {
+		font-size: 28px;
+		color: #e8e8e8;
+		margin-left: 33px;
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+}
+.menu-header {
+	display: none;
+
+	&__ico {
+		&_icon-close {
+		}
+	}
+
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__sub-title {
+	}
+
+	&__sub-list {
+	}
+
+	&__sub-item {
+	}
+
+	&__sub-link {
+	}
+}
+.brand {
+	background-color: #F1E4E6;
+	
+	&__body {
+		height: 764px;
+		display: flex;
+		align-items: center;
+	}
+	&__img {
+		margin-left: -150px;
+	}
+
+	&__title {
+		position: relative;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 38px;
+		color: #222222;
+		text-transform: uppercase;
+		display: inline-block;
+		&::after {
+			content: "";
+			width: 12px;
+			height: 92px;
+			background-color: #f16d7f;
+			position: absolute;
+			top: -10px;
+			left: -25px;
+			z-index: 1;
+		}
+	}
+
+	&__sub-title {
+		font-weight: 700;
+		font-size: 32px;
+		
+		&--red {
+			color: #F16D7F;
+		}
+
+	}
+}
+.sale {
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+
+	&__sub-text {
+	}
+
+	&__sub-title {
+	}
+}
+.fetured {
+	&__txt {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+
+	&__sub-title {
+	}
+
+	&__sub-text {
+	}
+
+	&__price {
+	}
+
+	&__btn {
+	}
+}
+.skills {
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+}
+.footer {
+	&__top {
+	}
+
+	&__bottom {
+	}
+}
+.top-footer {
+	&__comment {
+	}
+
+	&__img {
+	}
+
+	&__text {
+	}
+
+	&__contact-email {
+	}
+
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__form {
+	}
+}
+.form-email {
+	&__input {
+	}
+
+	&__submit {
+	}
+}
+.bottom-footer {
+	&__copy {
+	}
+
+	&__text {
+	}
+
+	&__social {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+}
 
 //============================== /header ===================================
 /* Burger
