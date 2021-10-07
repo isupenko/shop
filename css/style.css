@@ -168,6 +168,31 @@ body {
   color: #fff;
 }
 
+.item__btn {
+  font-size: 14px;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  z-index: 2;
+}
+
+.item__btn:hover {
+  background-color: #f16d7f;
+}
+
+.item__btn--text {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -330,7 +355,7 @@ textarea.input {
 }
 
 .brand {
-  background-color: #F1E4E6;
+  background-color: #f1e4e6;
 }
 
 .brand__body {
@@ -344,7 +369,7 @@ textarea.input {
 }
 
 .brand__img {
-  margin-left: -150px;
+  margin-left: -160px;
 }
 
 .brand__title {
@@ -374,7 +399,219 @@ textarea.input {
 }
 
 .brand__sub-title--red {
+  color: #f16d7f;
+}
+
+.sale__body {
+  margin-top: 65px;
+}
+
+.sale__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sale__item {
+  width: 360px;
+  height: 260px;
+}
+
+.sale__item--men {
+  background: url(../img/men.jpg) no-repeat;
+}
+
+.sale__item--woman {
+  background: url(../img/woman.jpg) no-repeat;
+}
+
+.sale__item--kids {
+  background: url(../img/kids.jpg) no-repeat;
+}
+
+.sale__item--long {
+  background: url(../img/accesories.jpg);
+  width: 1140px;
+  height: 180px;
+  margin-top: 20px;
+}
+
+.sale__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sale__sub-text {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.sale__sub-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: center;
+  color: #f16d7f;
+  text-transform: uppercase;
+}
+
+.fetured__txt {
+  margin: 96px 0 18px 0;
+  text-align: center;
+}
+
+.fetured__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+}
+
+.fetured__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9f9f9f;
+}
+
+.fetured__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.fetured__item {
+  width: 360px;
+  height: 580px;
+  margin: 30px 0;
+}
+
+.fetured__link {
+  display: block;
+  background: #f8f8f8;
+}
+
+.fetured__img {
+  position: relative;
+}
+
+.fetured__img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.fetured__img:hover .item__btn {
+  display: block;
+}
+
+.fetured__img:hover::before {
+  display: block;
+}
+
+.fetured__sub-title {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  padding: 25px 0 12px 18px;
+}
+
+.fetured__sub-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 18px;
+  color: #5d5d5d;
+}
+
+.fetured__price {
+  font-size: 16px;
+  line-height: 19px;
+  color: #f16d7f;
+  padding: 18px;
+}
+
+.fetured__btn {
+  text-align: center;
+  margin-bottom: 95px;
+}
+
+.skills {
+  width: 100%;
+  height: 341px;
+  background: #222224;
+}
+
+.skills__body {
+  padding: 90px 10px;
+}
+
+.skills__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.skills__ico {
   color: #F16D7F;
+  font-size: 40px;
+  margin-bottom: 28px;
+}
+
+.skills__sub-title {
+  font-weight: normal;
+  font-size: 19.96px;
+  line-height: 24px;
+  color: #FBFBFB;
+  margin-bottom: 16px;
+}
+
+.skills__sub-text {
+  font-weight: 300;
+  font-size: 13.972px;
+  line-height: 17px;
+  text-align: center;
+  color: #FBFBFB;
 }
 
 /* Burger
