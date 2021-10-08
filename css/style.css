@@ -869,4 +869,18 @@ textarea.input {
   font-size: 30px;
   padding: 5px 5px;
 }
+
+.registration__head {
+  width: 100%;
+  height: 148px;
+  background: #F8F3F4;
+}
+
+.registration__title {
+  font-size: 24px;
+  line-height: 29px;
+  color: #F16D7F;
+  text-transform: uppercase;
+  line-height: 148px;
+}
 /*# sourceMappingURL=style.css.map */
