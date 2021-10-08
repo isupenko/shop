@@ -178,6 +178,19 @@ body {
 			color: #fff;
 		}
 	}
+	&--rad {
+		transition: box-shadow 0.3s ease 0s;
+		margin-left: -3px;
+		width: 104px;
+		height: 46px;
+		background-color: #f16d7f;
+		border-radius: 0px 23px 23px 0px;
+		color: #fff;
+		&:hover {
+			box-shadow: 0 0 7px $redColor;
+		}
+		//display: block;
+	}
 }
 
 .item__btn {
@@ -201,7 +214,6 @@ body {
 	}
 }
 
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -209,8 +221,12 @@ textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	transition: box-shadow 0.3s ease 0s;
 	&:focus {
 		outline: none;
+	}
+	&:hover {
+		box-shadow: 0 0 7px $redColor;
 	}
 }
 .input {
@@ -294,6 +310,11 @@ textarea.input {
 	clip-path: inset(50%);
 	margin: -1px;
 }
+
+.display-block {
+	display: block;
+}
+
 //</Стили обьектов>==================================================================================
 
 //============================== header ====================================
@@ -319,12 +340,20 @@ textarea.input {
 		font-size: 32px;
 		color: #e8e8e8;
 		margin-left: 25px;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $redColor;
+		}
 	}
 
 	&__user {
 		font-size: 28px;
 		color: #e8e8e8;
 		margin-left: 33px;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $redColor;
+		}
 	}
 
 	&__cart {
@@ -346,12 +375,20 @@ textarea.input {
 	font-size: 24px;
 	color: #e8e8e8;
 	//margin-left: 40px;
+	transition: color 0.3s ease 0s;
+	&:hover {
+		color: $redColor;
+	}
 }
 .cart-header {
 	&__icon {
 		font-size: 28px;
 		color: #e8e8e8;
 		margin-left: 33px;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $redColor;
+		}
 	}
 
 	&__body {
@@ -362,33 +399,88 @@ textarea.input {
 }
 .menu-header {
 	display: none;
+	position: absolute;
+	width: 232px;
+	height: 764px;
+	right: 0;
+	top: 75px;
+	background-color: #fff;
+	z-index: 10;
+	&--show {
+		display: block;
+	}
 
 	&__ico {
+		position: absolute;
+		right: 16px;
+		top: 16px;
 		&_icon-close {
+			color: #6F6E6E;
 		}
 	}
 
 	&__title {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000000;
+		text-transform: uppercase;
+		margin: 37px 0 0 33px;
 	}
 
 	&__list {
+		padding: 14px 0 0 33px;
 	}
 
 	&__item {
 	}
 
 	&__sub-title {
+		font-size: 14px;
+		line-height: 17px;
+		color: #F16D7F;
+		text-transform: uppercase;
+		margin: 10px 0;
 	}
 
 	&__sub-list {
+		margin-left: 20px;
 	}
 
 	&__sub-item {
+		padding: 6px 0;
+		
 	}
 
 	&__sub-link {
+		padding: 5px;
+		position: relative;
+		font-size: 14px;
+		line-height: 17px;
+		color: #6F6E6E;
+		&::after {
+			content: "";
+			width: 0px;
+			height: 2px;
+			background-color: $redColor;
+			position: absolute;
+			bottom: 0px;
+			left: 0;
+			z-index: 1;
+			transition: width .1s linear;
+		}
+		&:hover {
+			color: #000;
+			&::after {
+				width: 100%;
+			}
+		}
 	}
 }
+
+//============================== /header ===================================
+
+//====================================== main ==========================================
 .brand {
 	background-color: #f1e4e6;
 
@@ -495,6 +587,9 @@ textarea.input {
 		text-transform: uppercase;
 	}
 }
+
+//======================fetured========================
+
 .fetured {
 	&__txt {
 		margin: 96px 0 18px 0;
@@ -539,7 +634,6 @@ textarea.input {
 
 	&__img {
 		position: relative;
-
 		&::before {
 			content: "";
 			width: 100%;
@@ -590,7 +684,7 @@ textarea.input {
 
 .skills {
 	width: 100%;
-	height: 341px;
+	min-height: 341px;
 	background: #222224;
 	&__body {
 		padding: 90px 10px;
@@ -607,11 +701,10 @@ textarea.input {
 	}
 
 	&__item {
-
 	}
 
 	&__ico {
-		color: #F16D7F;
+		color: #f16d7f;
 		font-size: 40px;
 		margin-bottom: 28px;
 	}
@@ -620,7 +713,7 @@ textarea.input {
 		font-weight: normal;
 		font-size: 19.96px;
 		line-height: 24px;
-		color: #FBFBFB;
+		color: #fbfbfb;
 		margin-bottom: 16px;
 	}
 
@@ -629,113 +722,125 @@ textarea.input {
 		font-size: 13.972px;
 		line-height: 17px;
 		text-align: center;
-		color: #FBFBFB;
+		color: #fbfbfb;
 	}
 }
+//===================================== /main ==========================================
+
+//======================================= footer ========================================
 .footer {
 	&__top {
+		width: 100%;
+		min-height: 448px;
+		background: url(../img/footer-bg.jpg) no-repeat top center;
+		background-size: cover;
 	}
 
 	&__bottom {
 	}
 }
 .top-footer {
+	&__body {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
 	&__comment {
+		width: 360px;
+		height: 448px;
+		display: flex;
+		align-items: center;
 	}
 
 	&__img {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__image {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
 	}
 
 	&__text {
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		color: #222224;
 	}
-
-	&__contact-email {
-	}
-
+}
+.email-footer {
 	&__body {
 	}
 
 	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		text-align: center;
+		color: #222224;
+		text-transform: uppercase;
+		margin-bottom: 15px;
 	}
 
-	&__form {
+	&__text {
+		font-weight: 400;
+		font-size: 18px;
+		text-align: center;
+		color: #222224;
+		text-transform: uppercase;
+		margin-bottom: 30px;
 	}
 }
+
 .form-email {
 	&__input {
+		width: 256px;
+		height: 46px;
+		background-color: #e1e1e1;
+		border-radius: 23px 0 0 23px;
+		padding: 0 30px;
+		//display: block;
 	}
 
 	&__submit {
 	}
 }
+
 .bottom-footer {
-	&__copy {
+	width: 100%;
+	height: 79px;
+	background: #222224;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 79px;
 	}
 
 	&__text {
+		font-size: 16px;
+		line-height: 150%;
+		color: #fbfbfb;
 	}
 
 	&__social {
+		color: #fff;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $redColor;
+		}
 	}
 
 	&__list {
+		display: flex;
 	}
 
 	&__item {
+		font-size: 30px;
+		padding: 5px 5px;
 	}
 }
 
-//============================== /header ===================================
-/* Burger
-
-.icon-menu {
-	display: none;
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span {
-			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-			&:first-child {
-				top: 0px;
-			}
-			&:last-child {
-				top: auto;
-				bottom: 0px;
-			}
-		}
-		&._active {
-			span {
-				transform: scale(0);
-				&:first-child {
-					transform: rotate(-45deg);
-					top: calc(50% - 1px);
-				}
-				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
-				}
-			}
-		}
-	}
-}
-*/
-
-//====================================== main ==========================================
-
-//===================================== /main ==========================================
-
-//======================================= footer ========================================
-
-//====================================== /footer =========================================
+//====================================== /footer ================================

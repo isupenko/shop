@@ -19,7 +19,7 @@
                <button type="button" class="header__search _icon-search"></button>
             </div>
             <div class="header__box">
-               <button type="button" class="menu _icon-burger"></button>
+               <button type="button" id="burger" class="menu _icon-burger"></button>
                <a href="#" class="header__user _icon-user"></a>
                <div class="header__cart cart-header">
                   <a href="#" class="cart-header__icon _icon-cart"></a>
@@ -27,8 +27,8 @@
                      <ul class="cart-header__list"></ul>
                   </div>
                </div>
-               <nav class="header__menu menu-header">
-                  <button type="button" class="menu-header__ico_icon-close"></button>
+               <nav class="header__menu menu-header" id="menu">
+                  <button type="button" class="menu-header__ico _icon-close"></button>
                   <h2 class="menu-header__title">menu</h2>
                   <ul class="menu-header__list">
                      <li class="menu-header__item">
@@ -48,7 +48,7 @@
                            </li>
                         </ul>
                         <h3 class="menu-header__sub-title">woman</h3>
-                        <ul>
+                        <ul class="menu-header__sub-list">
                            <li class="menu-header__sub-item">
                               <a href="#" class="menu-header__sub-link">Accessories</a>
                            </li>
@@ -66,7 +66,7 @@
                            </li>
                         </ul>
                         <h3 class="menu-header__sub-title">kids</h3>
-                        <ul>
+                        <ul class="menu-header__sub-list">
                            <li class="menu-header__sub-item">
                               <a href="#" class="menu-header__sub-link">Accessories</a>
                            </li>
@@ -263,22 +263,27 @@
    <footer class="footer">
       <div class="footer__top top-footer">
          <div class="container">
-            <div class="top-footer__comment">
-               <article>
-                  <div class="top-footer__img"><img src="./img/user.jpg" alt="comment"></div>
-                  <p class="top-footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
-                     condimentum“</p>
-               </article>
-            </div>
-            <div class="top-footer__contact-email">
-               <div class="top-footer__body">
-                  <h2 class="top-footer__title">subscribe</h2>
-                  <p class="top-footer__text">for our newletter and promotion</p>
-                  <div class="top-footer__form form-email">
-                     <form action="" method="" name="contact_form">
-                        <input class="form-email__input" type="text" name="email" placeholder="Ender Your Email">
-                        <input class="form-email__submit" type="submit" value="Subscribe">
-                     </form>
+            <div class="top-footer__body">
+               <div class="top-footer__comment">
+                  <article>
+                     <div class="top-footer__img"><img src="./img/user.jpg" class="top-footer__image" alt="comment"></div>
+                     <p class="top-footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                        condimentum“</p>
+                  </article>
+               </div>
+               <div class="top-footer__email email-footer">
+                  <div class="email-footer__body">
+                     <h2 class="email-footer__title">subscribe</h2>
+                     <p class="email-footer__text">for our newletter and promotion</p>
+                     <div class="email-footer__form form-email">
+                        <form action="" method="" name="contact_form">
+                           <fieldset>
+                              <legend class="visually-hidden">Контактная информация</legend>
+                                 <label><input class="form-email__input" type="text" name="email" placeholder="Ender Your Email"></label>
+                                 <label><input class="form-email__submit btn--rad" type="submit" value="Subscribe"></label>
+                           </fieldset>
+                        </form>
+                     </div>
                   </div>
                </div>
             </div>
@@ -286,20 +291,21 @@
       </div>
       <div class="footer__bottom bottom-footer">
          <div class="container">
-            <div class="bottom-footer__copy">
+            <div class="bottom-footer__body">
                <p class="bottom-footer__text">© 2021 Brand All Rights Reserved.</p>
-            </div>
-            <div class="bottom-footer__social">
-               <ul class="bottom-footer__list">
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-facebook"></a></li>
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-instagram"></a></li>
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-twitter"></a></li>
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-vk"></a></li>
-               </ul>
+               <div class="bottom-footer__social">
+                  <ul class="bottom-footer__list">
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-facebook"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-instagram"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-twitter"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-vk"></a></li>
+                  </ul>
+               </div>
             </div>
          </div>
       </div>
    </footer>
+   <script src="js/script.js"></script>
 </body>
 
 </html>
