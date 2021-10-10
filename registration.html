@@ -102,38 +102,51 @@
       </section>
       <section class="registration__form form-registration">
          <div class="container">
-            <div class="form-registration__body">
-               <fieldset>
-                  <legend">Your Name</legend>
-                     <label><input type="text" name="first" placeholder="First Name"></label>
-                     <label><input type="text" name="last" placeholder="Last Name"></label>
-               </fieldset>
-               <fieldset>
-                  <legend>Кто по жизни?</legend>
-                  <input type="radio" id="male" name="who" value="male" checked>
-                  <label for="male">мужик</label>
-                  <input type="radio" id="female" name="who" value="female">
-                  <label for="female">тетка</label>
-               </fieldset>
-               <fieldset>
-                  <legend">Your Name</legend>
-                     <label><input type="email" name="email" placeholder="Email"></label>
-                     <label><input type="password" name="pass" placeholder="Password"></label>
-               </fieldset>
-            </div>
-            <div class="form-registration__txt txt-reg">
-               <div class="txt-reg__title">loyalty has its perks</div>
-               <div class="txt-reg__text">Get in on the loyalty program where you can earn points and unlock serious
-                  perks.
-                  Starting with these as soon as you join:</div>
-               <div class="txt-reg__condition">
-                  <ul class="txt-reg__list">
-                     <li class="txt-reg__item _icon-mark">15% off welcome offer</li>
-                     <li class="txt-reg__item _icon-mark">Free shipping, returns and exchanges on all orders</li>
-                     <li class="txt-reg__item _icon-mark">$10 off a purchase on your birthday</li>
-                     <li class="txt-reg__item _icon-mark">Early access to products</li>
-                     <li class="txt-reg__item _icon-mark">Exclusive offers & rewards</li>
-                  </ul>
+            <div class="form-registration__wrp">
+               <div class="form-registration__body">
+                  <form action="">
+                     <fieldset>
+                        <legend">Your Name</legend>
+                           <label><input class="input form-registration__input" type="text" name="first"
+                                 placeholder="First Name"></label>
+                           <label><input class="input form-registration__input" type="text" name="last"
+                                 placeholder="Last Name"></label>
+                     </fieldset>
+                     <fieldset>
+                        <legend class="visually-hidden">Кто по жизни?</legend>
+                        <input type="radio" id="male" name="who" value="male" checked>
+                        <label class="radio-input" for="male">Male</label>
+                        <input class="radio-input" type="radio" id="female" name="who" value="female">
+                        <label class="radio-input" for="female">Female</label>
+                     </fieldset>
+                     <fieldset class="form-registration__pass">
+                        <legend">Login details</legend>
+                           <label><input class="input form-registration__input" type="email" name="email"
+                                 placeholder="Email"></label>
+                           <label><input class="input form-registration__input" type="password" name="pass"
+                                 placeholder="Password"></label>
+                     </fieldset>
+                  </form>
+                  <div class="form-rgistration__text">
+                     Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase
+                     letters
+                  </div>
+                  <button class="form-registration__btn btn">join now <span class="_icon-arrow-right"></span></button>
+               </div>
+               <div class="form-registration__txt txt-reg">
+                  <div class="txt-reg__title">loyalty has its perks</div>
+                  <div class="txt-reg__text">Get in on the loyalty program where you can earn points and unlock serious
+                     perks.
+                     Starting with these as soon as you join:</div>
+                  <div class="txt-reg__condition">
+                     <ul class="txt-reg__list">
+                        <li class="txt-reg__item _icon-mark"><span>15% off welcome offer</span></li>
+                        <li class="txt-reg__item _icon-mark"><span>Free shipping, returns and exchanges on all orders</span></li>
+                        <li class="txt-reg__item _icon-mark"><span>$10 off a purchase on your birthday</span></li>
+                        <li class="txt-reg__item _icon-mark"><span>Early access to products</span></li>
+                        <li class="txt-reg__item _icon-mark"><span>Exclusive offers & rewards</span></li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>

@@ -142,7 +142,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 15px;
+  padding: 0px 20px;
   text-align: center;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -214,6 +214,7 @@ body {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="password"],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -227,6 +228,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
+input[type="password"]:focus,
 textarea:focus {
   outline: none;
 }
@@ -234,6 +236,7 @@ textarea:focus {
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="tel"]:hover,
+input[type="password"]:hover,
 textarea:hover {
   -webkit-box-shadow: 0 0 7px #f16d7f;
           box-shadow: 0 0 7px #f16d7f;
@@ -882,5 +885,85 @@ textarea.input {
   color: #F16D7F;
   text-transform: uppercase;
   line-height: 148px;
+}
+
+.form-registration__wrp {
+  margin: 65px 0 96px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-registration__body {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 560px;
+          flex: 0 1 560px;
+}
+
+.form-registration__input {
+  height: 45px;
+  border: 1px solid #A4A4A4;
+  margin: 20px 0;
+}
+
+.form-registration__text {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.form-registration__btn {
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.form-registration__btn span {
+  margin-left: 20px;
+  font-size: 10px;
+}
+
+.form-registration__pass {
+  margin-top: 35px;
+}
+
+.radio-input {
+  margin-right: 15px;
+}
+
+#male, #female {
+  margin-right: 4px;
+}
+
+.txt-reg {
+  margin-left: 120px;
+}
+
+.txt-reg__title {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.txt-reg__text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.txt-reg__item {
+  padding: 16px 0;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.txt-reg__item span {
+  margin-left: 25px;
 }
 /*# sourceMappingURL=style.css.map */
