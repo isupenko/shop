@@ -9,8 +9,8 @@ $fontSize: 14;
 
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
 $minWidth: 320px;
-$maxWidth: 1440;
-$maxWidthContainer: 1270;
+$maxWidth: 1600;
+$maxWidthContainer: 1140;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -129,6 +129,7 @@ body {
 	max-width: $maxWidthContainer + px;
 	padding: 0 15px;
 	margin: 0 auto;
+	//border: 1px solid #222222;
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -178,6 +179,28 @@ body {
 		}
 	}
 }
+
+.item__btn {
+	font-size: 14px;
+	transition: background-color 0.3s ease 0s;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 10px 15px;
+	z-index: 2;
+	&:hover {
+		background-color: $redColor;
+	}
+	&--text {
+		margin-left: 10px;
+		font-size: 14px;
+	}
+}
+
 
 input[type="text"],
 input[type="email"],
@@ -258,9 +281,409 @@ textarea.input {
 		}
 	}
 }
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
 //</Стили обьектов>==================================================================================
 
 //============================== header ====================================
+.header {
+	width: 100%;
+	height: 75px;
+	//position: absolute;
+	background: #222222;
+	//margin: 0 auto;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 75px;
+	}
+
+	&__box {
+		display: flex;
+	}
+
+	&__search {
+		font-size: 32px;
+		color: #e8e8e8;
+		margin-left: 25px;
+	}
+
+	&__user {
+		font-size: 28px;
+		color: #e8e8e8;
+		margin-left: 33px;
+	}
+
+	&__cart {
+	}
+
+	&__menu {
+	}
+}
+
+.logo {
+	padding: 15px 15px 15px 3px;
+	margin-top: -5px;
+}
+
+.logo__img {
+}
+
+.menu {
+	font-size: 24px;
+	color: #e8e8e8;
+	//margin-left: 40px;
+}
+.cart-header {
+	&__icon {
+		font-size: 28px;
+		color: #e8e8e8;
+		margin-left: 33px;
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+}
+.menu-header {
+	display: none;
+
+	&__ico {
+		&_icon-close {
+		}
+	}
+
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__sub-title {
+	}
+
+	&__sub-list {
+	}
+
+	&__sub-item {
+	}
+
+	&__sub-link {
+	}
+}
+.brand {
+	background-color: #f1e4e6;
+
+	&__body {
+		height: 764px;
+		display: flex;
+		align-items: center;
+	}
+	&__img {
+		margin-left: -160px;
+	}
+
+	&__title {
+		position: relative;
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 38px;
+		color: #222222;
+		text-transform: uppercase;
+		display: inline-block;
+		&::after {
+			content: "";
+			width: 12px;
+			height: 92px;
+			background-color: #f16d7f;
+			position: absolute;
+			top: -10px;
+			left: -25px;
+			z-index: 1;
+		}
+	}
+
+	&__sub-title {
+		font-weight: 700;
+		font-size: 32px;
+
+		&--red {
+			color: #f16d7f;
+		}
+	}
+}
+.sale {
+	&__body {
+		margin-top: 65px;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__item {
+		width: 360px;
+		height: 260px;
+		//border: 1px solid #000;
+		&--men {
+			background: url(../img/men.jpg) no-repeat;
+		}
+		&--woman {
+			background: url(../img/woman.jpg) no-repeat;
+		}
+		&--kids {
+			background: url(../img/kids.jpg) no-repeat;
+		}
+		&--long {
+			background: url(../img/accesories.jpg);
+			width: 1140px;
+			height: 180px;
+			margin-top: 20px;
+		}
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__sub-text {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -100%);
+		position: absolute;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19px;
+		text-align: center;
+		color: #ffffff;
+		text-transform: uppercase;
+	}
+
+	&__sub-title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 29px;
+		text-align: center;
+		color: #f16d7f;
+		text-transform: uppercase;
+	}
+}
+.fetured {
+	&__txt {
+		margin: 96px 0 18px 0;
+		text-align: center;
+	}
+
+	&__title {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 36px;
+		color: #222222;
+	}
+
+	&__text {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		color: #9f9f9f;
+	}
+
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		width: 360px;
+		height: 580px;
+		margin: 30px 0;
+	}
+
+	&__link {
+		display: block;
+		background: #f8f8f8;
+	}
+
+	&__img {
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: 0;
+			display: none;
+		}
+		&:hover {
+			.item__btn {
+				display: block;
+			}
+			&::before {
+				display: block;
+			}
+		}
+	}
+
+	&__sub-title {
+		text-transform: uppercase;
+		font-size: 13px;
+		line-height: 16px;
+		color: #000000;
+		padding: 25px 0 12px 18px;
+	}
+
+	&__sub-text {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		padding: 0 18px;
+		color: #5d5d5d;
+	}
+
+	&__price {
+		font-size: 16px;
+		line-height: 19px;
+		color: #f16d7f;
+		padding: 18px;
+	}
+
+	&__btn {
+		text-align: center;
+		margin-bottom: 95px;
+	}
+}
+
+.skills {
+	width: 100%;
+	height: 341px;
+	background: #222224;
+	&__body {
+		padding: 90px 10px;
+	}
+
+	&__title {
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__item {
+
+	}
+
+	&__ico {
+		color: #F16D7F;
+		font-size: 40px;
+		margin-bottom: 28px;
+	}
+
+	&__sub-title {
+		font-weight: normal;
+		font-size: 19.96px;
+		line-height: 24px;
+		color: #FBFBFB;
+		margin-bottom: 16px;
+	}
+
+	&__sub-text {
+		font-weight: 300;
+		font-size: 13.972px;
+		line-height: 17px;
+		text-align: center;
+		color: #FBFBFB;
+	}
+}
+.footer {
+	&__top {
+	}
+
+	&__bottom {
+	}
+}
+.top-footer {
+	&__comment {
+	}
+
+	&__img {
+	}
+
+	&__text {
+	}
+
+	&__contact-email {
+	}
+
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__form {
+	}
+}
+.form-email {
+	&__input {
+	}
+
+	&__submit {
+	}
+}
+.bottom-footer {
+	&__copy {
+	}
+
+	&__text {
+	}
+
+	&__social {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+}
 
 //============================== /header ===================================
 /* Burger
