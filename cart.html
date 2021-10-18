@@ -95,62 +95,78 @@
    </header>
 
    <main>
-      <section class="registration__head">
+      <section class="cart__head">
          <div class="container">
-            <h1 class="registration__title">registration</h1>
+            <h1 class="cart__title">shopping cart</h1>
          </div>
       </section>
-      <section class="registration__form form-registration">
-         <div class="container">
-            <div class="form-registration__wrp">
-               <div class="form-registration__body">
-                  <form action="">
-                     <fieldset>
-                        <legend">Your Name</legend>
-                           <label><input class="input form-registration__input" type="text" name="first"
-                                 placeholder="First Name"></label>
-                           <label><input class="input form-registration__input" type="text" name="last"
-                                 placeholder="Last Name"></label>
-                     </fieldset>
-                     <fieldset>
-                        <legend class="visually-hidden">Кто по жизни?</legend>
-                        <input type="radio" id="male" name="who" value="male" checked>
-                        <label class="radio-input" for="male">Male</label>
-                        <input class="radio-input" type="radio" id="female" name="who" value="female">
-                        <label class="radio-input" for="female">Female</label>
-                     </fieldset>
-                     <fieldset class="form-registration__pass">
-                        <legend">Login details</legend>
-                           <label><input class="input form-registration__input" type="email" name="email"
-                                 placeholder="Email"></label>
-                           <label><input class="input form-registration__input" type="password" name="pass"
-                                 placeholder="Password"></label>
-                     </fieldset>
-                  </form>
-                  <div class="form-rgistration__text">
-                     Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase
-                     letters
-                  </div>
-                  <button class="form-registration__btn btn">join now <span class="_icon-arrow-right"></span></button>
-               </div>
-               <div class="form-registration__txt txt-reg">
-                  <div class="txt-reg__title">loyalty has its perks</div>
-                  <div class="txt-reg__text">Get in on the loyalty program where you can earn points and unlock serious
-                     perks.
-                     Starting with these as soon as you join:</div>
-                  <div class="txt-reg__condition">
-                     <ul class="txt-reg__list">
-                        <li class="txt-reg__item _icon-mark"><span>15% off welcome offer</span></li>
-                        <li class="txt-reg__item _icon-mark"><span>Free shipping, returns and exchanges on all orders</span></li>
-                        <li class="txt-reg__item _icon-mark"><span>$10 off a purchase on your birthday</span></li>
-                        <li class="txt-reg__item _icon-mark"><span>Early access to products</span></li>
-                        <li class="txt-reg__item _icon-mark"><span>Exclusive offers & rewards</span></li>
-                     </ul>
-                  </div>
+      <div class="container">
+         <section class="cart__body">
+            <h2 class="visually-hidden">Cart</h2>
+            <div class="cart__product">
+               <ul class="cart__list">
+                  <li class="cart__item">
+                     <div class="cart__img">
+                        <img src="img/arrivals/arrival-3.jpg" alt="product">
+                     </div>
+                     <div class="cart__description description-cart">
+                        <button type="button" class="description-cart__ico _icon-close"></button>
+                        <div class="description-cart__title">mango people <br>t-shirt</div>
+                        <div class="description-cart__text">
+                           <p>Price: <span>$300</span></p>
+                           <p>Color: Red</p>
+                           <p>Size: XL</p>
+                           <p>Quantity: 2</p>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cart__item">
+                     <div class="cart__img">
+                        <img class="" src="img/arrivals/arrival-2.jpg" alt="product">
+                     </div>
+                     <div class="cart__description description-cart">
+                        <button type="button" class="description-cart__ico _icon-close"></button>
+                        <div class="description-cart__title">mango people <br>t-shirt</div>
+                        <div class="description-cart__text">
+                           <p>Price: <span>$300</span></p>
+                           <p>Color: Red</p>
+                           <p>Size: XL</p>
+                           <p>Quantity: 2</p>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+               <div class="cart__btn">
+                  <button class="btn_white txt-uppercase">clear shopping cart</button>
+                  <button class="btn_white txt-uppercase">continue shopping</button>
                </div>
             </div>
-         </div>
-      </section>
+
+            <div class="cart__reg">
+               <div class="cart__form form-cart">
+                  <form action="">
+                     <fieldset>
+                        <legend class="txt-uppercase">shipping adress</legend>
+                           <label><input class="input form-cart__input" type="text" name="Bangladesh"
+                                 placeholder="Bangladesh"></label>
+                           <label><input class="input form-cart__input" type="text" name="State"
+                                 placeholder="State"></label>
+                           <label><input class="input form-cart__input" type="text" name="Postcode"
+                                 placeholder="Postcode / Zip"></label>
+                     </fieldset>
+                  </form>
+                  <button class="btn_white txt-uppercase">get a quote</button>
+               </div>
+               <div class="cart__checkout checkout-cart">
+                  <div class="checkout-cart__text">
+                     <p class="checkout-cart__sub-title">sub total <span>$900</span></p>
+                     <p class="checkout-cart__title">grand total <span>$900</span></p>
+                  </div>
+                  <button class="btn checkout-cart__btn">proceed to checkout</button>
+               </div>
+            </div>
+         </section>
+      </div>
    </main>
 
    <footer class="footer">
