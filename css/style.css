@@ -761,7 +761,7 @@ textarea.input {
 .fetured__list {
   display: -ms-grid;
   display: grid;
-  gap: 30px;
+  gap: 20px;
   -ms-grid-columns: (minmax(300px, auto))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 }
@@ -769,6 +769,7 @@ textarea.input {
 .fetured__link {
   display: block;
   background: #f8f8f8;
+  width: 100%;
 }
 
 .fetured__img {
@@ -819,7 +820,7 @@ textarea.input {
 
 .fetured__btn {
   text-align: center;
-  margin-bottom: 95px;
+  margin: 63px 0 95px 0;
 }
 
 .skills {
