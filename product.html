@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/icons.css">
+   <link rel="stylesheet" href="./css/bootstrap.css">
+   <link rel="stylesheet" href="css/style.css">
    <title>Document</title>
 </head>
+
 <body>
    <header class="header">
       <div class="container">
@@ -94,64 +97,137 @@
    <main class="product">
       <section class="product__bread bread">
          <div class="container">
-            <h1>new arrivals</h1>
-            <nav>
-               <ul>
-                  <li><a href="#">home /</a></li>
-                  <li><a href="#">men /</a></li>
-                  <li>
-                     <p>new arrivals</p>
-                  </li>
-               </ul>
-            </nav>
+            <div class="bread__body">
+               <h1 class="bread__title">new arrivals</h1>
+               <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb product__breadcrumb">
+                     <li class="breadcrumb-item product__breadcrumb-item"><a class="product__breadcrumb-link"
+                           href="index.html">Home</a></li>
+                     <li class="breadcrumb-item product__breadcrumb-item"><a class="product__breadcrumb-link"
+                           href="#">Men</a></li>
+                     <li class="breadcrumb-item product__breadcrumb-item product__breadcrumb-item_active"
+                        aria-current="page">new arrivals</li>
+                  </ol>
+               </nav>
+            </div>
          </div>
       </section>
       <section class="product__slider slider-product">
-         <h2>Slider</h2>
-         <div class="slider-product__body">
-            <img src="./img/product/main.jpg" class="slider-product__img" alt="slider">
+         <h2 class="visually-hidden">Slider</h2>
+         <div id="carouselExampleControls" class="carousel slide product__carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img src="./img/product/main-1.jpg" class="d-block w-100" alt="product">
+               </div>
+               <div class="carousel-item">
+                  <img src="./img/product/main-1.jpg" class="d-block w-100" alt="product">
+               </div>
+               <div class="carousel-item">
+                  <img src="./img/product/main-1.jpg" class="d-block w-100" alt="product">
+               </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+               data-bs-slide="prev">
+               <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+               <span class="_icon-arrow_left" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+               data-bs-slide="next">
+               <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+               <span class="_icon-arrow_left" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+            </button>
          </div>
       </section>
-      <section class=" product__item">
+      <section class=" product__item item-product">
          <div class="container">
-            <h1>women collection</h1>
-            <p>moschino cheap and chic</p>
-            <p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals. </p>
-            <p>$561</p>
-            <div class="product__filter">
-               <button type="button">choose color</button>
-               <button type="button">choose size</button>
-               <button type="button">quantity</button>
+            <div class="item-product__txt">
+               <h2 class="item-product__title">women collection</h2>
+               <h3 class="item-product__sub-title">moschino cheap and chic</h3>
+               <p class="item-product__text">Compellingly actualize fully researched processes before proactive
+                  outsourcing. Progressively syndicate
+                  collaborative architectures before cutting-edge services. Completely visualize parallel core
+                  competencies
+                  rather than exceptional portals. </p>
+               <p class="item-product__price">$561</p>
             </div>
-            <button type="button" class="_icon-cart">Add to Cart</button>
+            <div class="product__filter">
+               <nav id="navbar-example2" class="navbar navbar-light px-3">
+                  <a class="nav-link dropdown-toggle product__color" data-bs-toggle="dropdown" href="#" role="button"
+                     aria-expanded="false">choose color</a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                     <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                  </ul>
+               </nav>
+               <nav id="navbar-example2" class="navbar navbar-light px-3">
+                  <a class="nav-link dropdown-toggle product__color" data-bs-toggle="dropdown" href="#" role="button"
+                     aria-expanded="false">choose size</a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                     <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                  </ul>
+               </nav>
+               <nav id="navbar-example2" class="navbar navbar-light px-3">
+                  <a class="nav-link dropdown-toggle product__color" data-bs-toggle="dropdown" href="#" role="button"
+                     aria-expanded="false">quantity</a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                     <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <button type="button" class="_icon-cart btn_white product__btn"><span>Add to Cart</span></button>
          </div>
       </section>
       <section>
          <div class="container">
-            <div class="product__catalog catalog-product">
-               <ul class="catalog-product__list">
-                  <li class="catalog-product__item">
-                     <a href="#" class="catalog-product__link">
-                        <img src="./img/product/product-1.jpg" class="catalog-product__img" alt="product">
-                        <h3 class="catalog-product__title">ellery x m'o capsule</h3>
-                        <p class="catalog-product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="catalog-product__price">$52.00</p>
+            <div class="product__catalog fetured__body">
+               <ul class="catalog-product__list fetured__list">
+                  <li class="catalog-product__item fetured__item">
+                     <a href="#" class="catalog-product__link fetured__link">
+                        <div class="fetured__img _ibg">
+                           <img src="./img/product/product-1.jpg" class="catalog-product__img" alt="product">
+                        </div>
+                        <h3 class="catalog-product__title fetured__sub-title">ellery x m'o capsule</h3>
+                        <p class="catalog-product__text fetured__sub-text">Known for her sculptural takes on traditional tailoring,
+                           Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <p class="catalog-product__price fetured__price">$52.00</p>
                      </a>
                   </li>
-                  <li>
-                     <a href="#" class="catalog-product__link">
-                        <img src="./img/product/product-2.jpg" class="catalog-product__img" alt="product">
-                        <h3 class="catalog-product__title">ellery x m'o capsule</h3>
-                        <p class="catalog-product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="catalog-product__price">$52.00</p>
+                  <li class="catalog-product__item fetured__item">
+                     <a href="#" class="catalog-product__link fetured__link">
+                        <div class="fetured__img _ibg">
+                           <img src="./img/product/product-2.jpg" class="catalog-product__img" alt="product">
+                        </div>
+                        <h3 class="catalog-product__title fetured__sub-title">ellery x m'o capsule</h3>
+                        <p class="catalog-product__text fetured__sub-text">Known for her sculptural takes on traditional tailoring,
+                           Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <p class="catalog-product__price fetured__price">$52.00</p>
                      </a>
                   </li>
-                  <li>
-                     <a href="#" class="catalog-product__link">
-                        <img src="./img/product/product-3.jpg" class="catalog-product__img" alt="product">
-                        <h3 class="catalog-product__title">ellery x m'o capsule</h3>
-                        <p class="catalog-product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="catalog-product__price">$52.00</p>
+                  <li class="catalog-product__item fetured__item fetured__item-none">
+                     <a href="#" class="catalog-product__link fetured__link">
+                        <div class="fetured__img _ibg">
+                           <img src="./img/product/product-3.jpg" class="catalog-product__img" alt="product">
+                        </div>
+                        <h3 class="catalog-product__title fetured__sub-title">ellery x m'o capsule</h3>
+                        <p class="catalog-product__text fetured__sub-text">Known for her sculptural takes on traditional tailoring,
+                           Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <p class="catalog-product__price fetured__price">$52.00</p>
                      </a>
                   </li>
                </ul>
@@ -162,22 +238,30 @@
    <footer class="footer">
       <div class="footer__top top-footer">
          <div class="container">
-            <div class="top-footer__comment">
-               <article>
-                  <div class="top-footer__img"><img src="./img/user.jpg" alt="comment"></div>
-                  <p class="top-footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
-                     condimentum“</p>
-               </article>
-            </div>
-            <div class="top-footer__contact-email">
-               <div class="top-footer__body">
-                  <h2 class="top-footer__title">subscribe</h2>
-                  <p class="top-footer__text">for our newletter and promotion</p>
-                  <div class="top-footer__form form-email">
-                     <form method="" name="contact_form">
-                        <input class="form-email__input" type="text" name="email" placeholder="Ender Your Email">
-                        <input class="form-email__submit" type="submit" value="Subscribe">
-                     </form>
+            <div class="top-footer__body">
+               <div class="top-footer__comment">
+                  <article>
+                     <div class="top-footer__img"><img src="./img/user.jpg" class="top-footer__image" alt="comment">
+                     </div>
+                     <p class="top-footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
+                        purus
+                        condimentum“</p>
+                  </article>
+               </div>
+               <div class="top-footer__email email-footer">
+                  <div class="email-footer__body">
+                     <h2 class="email-footer__title">subscribe</h2>
+                     <p class="email-footer__text">for our newletter and promotion</p>
+                     <div class="email-footer__form form-email">
+                        <form action="" method="" name="contact_form">
+                           <fieldset class="form-email__body">
+                              <legend class="visually-hidden">Контактная информация</legend>
+                              <label><input class="form-email__input" type="text" name="email"
+                                    placeholder="Ender Your Email"></label>
+                              <label><input class="form-email__submit btn_rad" type="submit" value="Subscribe"></label>
+                           </fieldset>
+                        </form>
+                     </div>
                   </div>
                </div>
             </div>
@@ -185,19 +269,21 @@
       </div>
       <div class="footer__bottom bottom-footer">
          <div class="container">
-            <div class="bottom-footer__copy">
+            <div class="bottom-footer__body">
                <p class="bottom-footer__text">© 2021 Brand All Rights Reserved.</p>
-            </div>
-            <div class="bottom-footer__social">
-               <ul class="bottom-footer__list">
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-facebook"></a></li>
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-instagram"></a></li>
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-twitter"></a></li>
-                  <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-vk"></a></li>
-               </ul>
+               <div class="bottom-footer__social">
+                  <ul class="bottom-footer__list">
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-facebook"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-instagram"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-twitter"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-vk"></a></li>
+                  </ul>
+               </div>
             </div>
          </div>
       </div>
    </footer>
+   <script src="./js/bootstrap.js"></script>
 </body>
+
 </html>

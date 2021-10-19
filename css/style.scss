@@ -1300,3 +1300,172 @@ textarea.input {
 }
 
 //+++++++++++++++++++++++++/cart++++++++++++++++++++++++
+
+//+++++++++++++++++++++++++++ product ++++++++++++++++++++++++++
+.product {
+	&__carousel {
+		//padding: 50px 0;
+	}
+
+	&__bread {
+		width: 100%;
+		min-height: 148px;
+	}
+
+	&__breadcrumb {
+		//display: flex;
+		justify-content: flex-end;
+	}
+
+	&__breadcrumb-item {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: #636363;
+		text-transform: uppercase;
+		&_active {
+			text-transform: uppercase;
+			color: $redColor;
+		}
+	}
+	
+	&__breadcrumb-link {
+		font-size: 14px;
+		line-height: 17px;
+		color: #636363;
+		&:hover {
+			color: $redColor;
+		}
+	}
+
+	&__btn {
+		margin-left: 10px;
+		color: $redColor;
+		margin: 50px 0;
+		border: 1px solid $redColor;
+		font-size: 16px;
+		span {
+			margin-left: 10px;
+		}
+	}
+
+	&__filter {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+	}
+
+	&__color {
+		font-size: 14px;
+		line-height: 17px;
+		color: #6F6E6E;
+		text-transform: uppercase;
+		&:hover {
+			color: $redColor;
+		}
+	}
+	&__catalog {
+		margin: 100px 0;
+	}
+}
+
+@include _992 {
+	.fetured__item-none {
+		display: none;
+	}
+}
+
+.carousel-control-next {
+	transform: rotate(180deg);
+}
+._icon-arrow_left {
+	font-size: 50px;
+	color: #000;
+	&:hover {
+		color: $redColor;
+	}
+}
+
+.bread {
+	background: #F8F3F4;
+
+	&__body {
+		min-height: 148px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 29px;
+		color: #F16D7F;
+		text-transform: uppercase;
+	}
+}
+
+.item-product {
+	max-width: 1140px;
+	min-height: 600px;
+	background-color: #fff;
+	margin: 0px auto;
+	border: 2px solid #dfdfdf;
+	text-align: center;
+	z-index: 2;
+	position: relative;
+	top: -30px;
+
+
+	&__txt {
+		max-width: 640px;
+		margin: 0 auto;
+		border-bottom: 1px solid #EAEAEA;
+	}
+
+	&__title {
+		display: inline-block;
+		position: relative;
+		margin-top: 65px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $redColor;
+		text-transform: uppercase;
+		&::before {
+			content: "";
+			width: 63px;
+			height: 3px;
+			background-color: $redColor;
+			position: absolute;
+			top: 30px;
+			left: 43px;
+		}
+	}
+
+	&__sub-title {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 22px;
+		color: #4D4D4D;
+		text-transform: uppercase;
+		margin: 30px 0 48px 0;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: #5E5E5E;
+		//padding: 0 280px;
+	}
+
+	&__price {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		color: #EF5B70;
+		margin: 32px 0 60px 0;
+	}
+}
+//++++++++++++++++++++++++++ /product ++++++++++++++++++++++++++
