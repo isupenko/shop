@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/icons.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <header class="header">
+      <div class="container">
+         <div class="header__body">
+            <div class="header__box">
+               <a href="#" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38" alt="logo"></a>
+               <button type="button" class="header__search _icon-search"></button>
+            </div>
+            <div class="header__box">
+               <button type="button" id="burger" class="menu _icon-burger"></button>
+               <a href="#" class="header__user _icon-user"></a>
+               <div class="header__cart cart-header">
+                  <a href="#" class="cart-header__icon _icon-cart"></a>
+                  <div class="cart-header__body">
+                     <ul class="cart-header__list"></ul>
+                  </div>
+               </div>
+               <nav class="header__menu menu-header" id="menu">
+                  <button type="button" class="menu-header__ico _icon-close"></button>
+                  <h2 class="menu-header__title">menu</h2>
+                  <ul class="menu-header__list">
+                     <li class="menu-header__item">
+                        <h3 class="menu-header__sub-title">men</h3>
+                        <ul class="menu-header__sub-list">
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Accessories</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Bags</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Denim</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">T-Shirts</a>
+                           </li>
+                        </ul>
+                        <h3 class="menu-header__sub-title">woman</h3>
+                        <ul class="menu-header__sub-list">
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Accessories</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Jackets & Coats</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Polos</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">T-Shirts</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Shirts</a>
+                           </li>
+                        </ul>
+                        <h3 class="menu-header__sub-title">kids</h3>
+                        <ul class="menu-header__sub-list">
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Accessories</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Jackets & Coats</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Polos</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">T-Shirts</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Shirts</a>
+                           </li>
+                           <li class="menu-header__sub-item">
+                              <a href="#" class="menu-header__sub-link">Bags</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <main>
+      <section class="cart__head">
+         <div class="container">
+            <h1 class="cart__title">shopping cart</h1>
+         </div>
+      </section>
+      <div class="container">
+         <section class="cart__body">
+            <h2 class="visually-hidden">Cart</h2>
+            <div class="cart__product">
+               <ul class="cart__list">
+                  <li class="cart__item">
+                     <div class="cart__img _ibg">
+                        <img src="img/arrivals/arrival-3.jpg" alt="product">
+                     </div>
+                     <div class="cart__description">
+                        <div class="description-cart__title">mango people <br>t-shirt</div>
+                        <div class="description-cart__text">
+                           <p>Price: <span>$300</span></p>
+                           <p>Color: Red</p>
+                           <p>Size: XL</p>
+                           <p>Quantity: 2</p>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="cart__item">
+                     <div class="cart__img _ibg">
+                        <img class="" src="img/arrivals/arrival-2.jpg" alt="product">
+                     </div>
+                     <div class="cart__description">
+                        <div class="description-cart__title">mango people <br>t-shirt</div>
+                        <div class="description-cart__text">
+                           <p>Price: <span>$300</span></p>
+                           <p>Color: Red</p>
+                           <p>Size: XL</p>
+                           <p>Quantity: 2</p>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+               <div class="cart__btn">
+                  <button class="btn--white">CLEAR SHOPPING CART</button>
+                  <button class="btn--white">CONTINUE SHOPPING</button>
+               </div>
+            </div>
+
+            <div class="cart__reg">
+               <div class="cart__form form-cart">
+                  <form action="">
+                     <fieldset>
+                        <legend">SHIPPING ADRESS</legend>
+                           <label><input class="input form-cart__input" type="text" name="Bangladesh"
+                                 placeholder="Bangladesh"></label>
+                           <label><input class="input form-cart__input" type="text" name="State"
+                                 placeholder="State"></label>
+                           <label><input class="input form-cart__input" type="text" name="Postcode"
+                                 placeholder="Postcode / Zip"></label>
+                     </fieldset>
+                  </form>
+                  <button class="btn--white">GET A QUOTE</button>
+               </div>
+               <div class="cart__checkout checkout-cart">
+                  <div class="checkout-cart__text">
+                     <p class="checkout-cart__sub-title">sub total <span>$900</span></p>
+                     <p class="checkout-cart__title">grand total <span>$900</span></p>
+                  </div>
+                  <button class="btn checkout-cart__btn">PROCEED TO CHECKOUT</button>
+               </div>
+            </div>
+         </section>
+      </div>
+   </main>
+
+   <footer class="footer">
+      <div class="footer__top top-footer">
+         <div class="container">
+            <div class="top-footer__body">
+               <div class="top-footer__comment">
+                  <article>
+                     <div class="top-footer__img"><img src="./img/user.jpg" class="top-footer__image" alt="comment">
+                     </div>
+                     <p class="top-footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
+                        purus
+                        condimentum“</p>
+                  </article>
+               </div>
+               <div class="top-footer__email email-footer">
+                  <div class="email-footer__body">
+                     <h2 class="email-footer__title">subscribe</h2>
+                     <p class="email-footer__text">for our newletter and promotion</p>
+                     <div class="email-footer__form form-email">
+                        <form action="" method="" name="contact_form">
+                           <fieldset>
+                              <legend class="visually-hidden">Контактная информация</legend>
+                              <label><input class="form-email__input" type="text" name="email"
+                                    placeholder="Ender Your Email"></label>
+                              <label><input class="form-email__submit btn--rad" type="submit" value="Subscribe"></label>
+                           </fieldset>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer__bottom bottom-footer">
+         <div class="container">
+            <div class="bottom-footer__body">
+               <p class="bottom-footer__text">© 2021 Brand All Rights Reserved.</p>
+               <div class="bottom-footer__social">
+                  <ul class="bottom-footer__list">
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-facebook"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-instagram"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-twitter"></a></li>
+                     <li class="bottom-footer__item"><a href="#" class="bottom-footer__social _icon-vk"></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <script src="js/script.js"></script>
+</body>
+
+</html>
