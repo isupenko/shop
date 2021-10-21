@@ -1791,6 +1791,14 @@ textarea.input {
   display: flex;
 }
 
+.bread__item {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #636363;
+  text-transform: uppercase;
+}
+
 .arrivals-catalog__list {
   display: -ms-grid;
   display: grid;

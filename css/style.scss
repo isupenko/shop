@@ -1557,6 +1557,13 @@ textarea.input {
 	&__list {
 		display: flex;
 	}
+	&__item {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: #636363;
+		text-transform: uppercase;
+	}
 }
 
 .arrivals-catalog {
