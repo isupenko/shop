@@ -101,8 +101,8 @@
                <h1 class="bread__title">new arrivals</h1>
                <nav class="bread__nav">
                   <ul class="bread__list">
-                     <li class="bread__item"><a href="#">home /</a></li>
-                     <li class="bread__item"><a href="#">men /</a></li>
+                     <li class="bread__item"><a class="bread__link" href="index.html">home /</a></li>
+                     <li class="bread__item"><a class="bread__link" href="#">men /</a></li>
                      <li class="bread__item bread__item_active">
                         <p>new arrivals</p>
                      </li>
@@ -113,15 +113,18 @@
       </section>
       <div class="container">
          <section class="catalog__filter filter-catalog">
-            <h2 class="filter-catalog__title">filter</h2>
+            <div class="filter-catalog__wrp">
+               <h2 class="filter-catalog__title">filter</h2>
+               <button type="button" class="filter-catalog__btn _icon-filter"></button>
+            </div>
             <div class="filter-catalog__body">
-               <button type="button" class="btn">trending now</button>
+               <button type="button" class="btn _icon-arrow-down">trending now</i></button>
                <button type="button" class="btn">size</button>
                <button type="button" class="btn">price</button>
             </div>
          </section>
          <section class="catalog__arrivals arrivals-catalog">
-            <h2 class="arrivals-catalog__title">Arrivals</h2>
+            <h2 class="arrivals-catalog__title visually-hidden">Arrivals</h2>
             <div class="arrivals-catalog__body">
                <ul class="arrivals-catalog__list">
                   <li class="arrivals-catalog__item card-product">
@@ -139,9 +142,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -158,9 +158,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -177,9 +174,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -196,9 +190,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -215,9 +206,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -234,9 +222,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -253,9 +238,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -272,9 +254,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="arrivals-catalog__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -291,9 +270,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                </ul>
             </div>

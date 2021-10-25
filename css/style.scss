@@ -355,6 +355,7 @@ textarea.input {
 
 	&__box {
 		display: flex;
+		align-items: center;
 	}
 
 	&__search {
@@ -364,6 +365,9 @@ textarea.input {
 		transition: color 0.3s ease 0s;
 		&:hover {
 			color: $redColor;
+		}
+		@include _480 {
+			display: none;
 		}
 	}
 
@@ -389,7 +393,33 @@ textarea.input {
 	margin-top: -5px;
 }
 
-.logo__img {
+.search-form {
+	&._active {
+		.search-form__input {
+			opacity: 1;
+			visibility: visible;
+			top: 100%;
+		}
+	}
+	
+	&__item {
+		margin-left: 10px;
+	}
+	&__input {
+		width: 400px;
+		height: 46px;
+		background-color: #e1e1e1;
+		border-radius: 23px;
+		padding: 0 30px;
+		opacity: 0;
+		visibility: hidden;
+		@include _768 {
+			width: 140px;
+		}
+		@include _480 {
+			display: none;
+		}
+	}
 }
 
 .menu {
@@ -403,12 +433,27 @@ textarea.input {
 }
 .cart-header {
 	&__icon {
+		position: relative;
 		font-size: 28px;
 		color: #e8e8e8;
 		margin-left: 33px;
 		transition: color 0.3s ease 0s;
 		&:hover {
 			color: $redColor;
+		}
+		span {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			top: -7px;
+			right: -7px;
+			background-color: $redColor;
+			color: #fff;
+			font-size: 12px;
 		}
 	}
 
@@ -1554,6 +1599,10 @@ textarea.input {
 	justify-content: space-between;
 	align-items: center;
 	height: 148px;
+	@include _480 {
+		flex-direction: column;
+		justify-content: space-around;
+	}
 	&__list {
 		display: flex;
 	}
@@ -1561,8 +1610,48 @@ textarea.input {
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 17px;
-		color: #636363;
+		color: $redColor;
 		text-transform: uppercase;
+		&_active {
+			font-weight: 700;
+		}
+	}
+
+	&__link {
+		color: #636363;
+	}
+}
+
+.filter-catalog {
+	margin: 50px 0;
+	display: flex;
+	justify-content: space-between;
+
+	&__wrp {
+		display: flex;
+		align-items: center;
+		
+	}
+	&__title {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000000;
+	}
+
+	&__btn {
+		padding: 0 10px;
+		&:hover {
+			color: $redColor;
+		}
+	}
+
+	&__body {
+		margin-right: 350px;
+		@include _768 {
+			margin-right: 20px
+		}
 	}
 }
 
@@ -1572,5 +1661,6 @@ textarea.input {
 		gap: 30px;
 		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 	}
+
 }
 //++++++++++++++++++++++++++ /catalog +++++++++++++++++++++++++
