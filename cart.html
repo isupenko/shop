@@ -15,14 +15,24 @@
       <div class="container">
          <div class="header__body">
             <div class="header__box">
-               <a href="index.html" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38" alt="logo"></a>
+               <a href="index.html" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38"
+                     alt="logo"></a>
                <button type="button" class="header__search _icon-search"></button>
+               <div class="search-form">
+                  <form action="" method="" name="search_form" class="search-form__item">
+                     <fieldset>
+                        <legend class="visually-hidden">Форма поиска</legend>
+                        <label><input class="search-form__input" type="text" name="form[]"
+                              placeholder="Search for minimalist chair"></label>
+                     </fieldset>
+                  </form>
+               </div>
             </div>
             <div class="header__box">
                <button type="button" id="burger" class="menu _icon-burger"></button>
                <a href="#" class="header__user _icon-user"></a>
                <div class="header__cart cart-header">
-                  <a href="#" class="cart-header__icon _icon-cart"></a>
+                  <a href="cart.html" class="cart-header__icon _icon-cart"><span>5</span></a>
                   <div class="cart-header__body">
                      <ul class="cart-header__list"></ul>
                   </div>
@@ -137,8 +147,8 @@
                   </li>
                </ul>
                <div class="cart__btn">
-                  <button class="btn_white txt-uppercase">clear shopping cart</button>
-                  <button class="btn_white txt-uppercase">continue shopping</button>
+                  <button class="btn_main txt-uppercase">clear shopping cart</button>
+                  <button class="btn_main txt-uppercase">continue shopping</button>
                </div>
             </div>
 
@@ -155,7 +165,7 @@
                                  placeholder="Postcode / Zip"></label>
                      </fieldset>
                   </form>
-                  <button class="btn_white txt-uppercase">get a quote</button>
+                  <button class="btn_main txt-uppercase">get a quote</button>
                </div>
                <div class="cart__checkout checkout-cart">
                   <div class="checkout-cart__text">
@@ -188,7 +198,7 @@
                      <p class="email-footer__text">for our newletter and promotion</p>
                      <div class="email-footer__form form-email">
                         <form action="" method="" name="contact_form">
-                           <fieldset>
+                           <fieldset class="form-email__body">
                               <legend class="visually-hidden">Контактная информация</legend>
                               <label><input class="form-email__input" type="text" name="email"
                                     placeholder="Ender Your Email"></label>

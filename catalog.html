@@ -6,6 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="./css/bootstrap.css">
    <link rel="stylesheet" href="css/icons.css">
    <title>Document</title>
 </head>
@@ -18,12 +19,21 @@
                <a href="index.html" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38"
                      alt="logo"></a>
                <button type="button" class="header__search _icon-search"></button>
+               <div class="search-form">
+                  <form action="" method="" name="search_form" class="search-form__item">
+                     <fieldset>
+                        <legend class="visually-hidden">Форма поиска</legend>
+                        <label><input class="search-form__input" type="text" name="form[]"
+                              placeholder="Search for minimalist chair"></label>
+                     </fieldset>
+                  </form>
+               </div>
             </div>
             <div class="header__box">
                <button type="button" id="burger" class="menu _icon-burger"></button>
                <a href="#" class="header__user _icon-user"></a>
                <div class="header__cart cart-header">
-                  <a href="#" class="cart-header__icon _icon-cart"></a>
+                  <a href="cart.html" class="cart-header__icon _icon-cart"><span>5</span></a>
                   <div class="cart-header__body">
                      <ul class="cart-header__list"></ul>
                   </div>
@@ -116,11 +126,6 @@
             <div class="filter-catalog__wrp">
                <h2 class="filter-catalog__title">filter</h2>
                <button type="button" class="filter-catalog__btn _icon-filter"></button>
-            </div>
-            <div class="filter-catalog__body">
-               <button type="button" class="btn _icon-arrow-down">trending now</i></button>
-               <button type="button" class="btn">size</button>
-               <button type="button" class="btn">price</button>
             </div>
          </section>
          <section class="catalog__arrivals arrivals-catalog">
@@ -273,8 +278,26 @@
                   </li>
                </ul>
             </div>
-            <nav>
-
+            <nav class="catalog__pages" aria-label="Page navigation example">
+               <ul class="pagination">
+                  <li class="page-item">
+                     <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                     </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item"><a class="page-link" href="#">7</a></li>
+                  <li class="page-item"><a class="page-link" href="#">8</a></li>
+                  <li class="page-item"><a class="page-link" href="#">9</a></li>
+                  <li class="page-item">
+                     <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                     </a>
+                  </li>
+               </ul>
             </nav>
          </section>
       </div>
@@ -357,6 +380,8 @@
          </div>
       </div>
    </footer>
+   <script src="js/script.js"></script>
+   <script src="./js/bootstrap.js"></script>
 </body>
 
 </html>

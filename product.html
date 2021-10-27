@@ -16,14 +16,24 @@
       <div class="container">
          <div class="header__body">
             <div class="header__box">
-               <a href="index.html" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38" alt="logo"></a>
+               <a href="index.html" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38"
+                     alt="logo"></a>
                <button type="button" class="header__search _icon-search"></button>
+               <div class="search-form">
+                  <form action="" method="" name="search_form" class="search-form__item">
+                     <fieldset>
+                        <legend class="visually-hidden">Форма поиска</legend>
+                        <label><input class="search-form__input" type="text" name="form[]"
+                              placeholder="Search for minimalist chair"></label>
+                     </fieldset>
+                  </form>
+               </div>
             </div>
             <div class="header__box">
                <button type="button" id="burger" class="menu _icon-burger"></button>
                <a href="#" class="header__user _icon-user"></a>
                <div class="header__cart cart-header">
-                  <a href="#" class="cart-header__icon _icon-cart"></a>
+                  <a href="cart.html" class="cart-header__icon _icon-cart"><span>5</span></a>
                   <div class="cart-header__body">
                      <ul class="cart-header__list"></ul>
                   </div>
@@ -212,9 +222,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="fetured__item card-product">
                      <a href="product.html" class="card-product__link">
@@ -231,9 +238,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                   <li class="fetured__item card-product fetured__item-none">
                      <a href="product.html" class="card-product__link">
@@ -250,9 +254,6 @@
                         </div>
                         <p class="card-product__price">$52.00</p>
                      </div>
-                     <!-- <div class="card-product__actions">
-                        <a href="cart.html" class="card-product__btn btn_white _icon-cart">Add to Cart</a>
-                     </div> -->
                   </li>
                </ul>
             </div>
@@ -307,6 +308,7 @@
          </div>
       </div>
    </footer>
+   <script src="js/script.js"></script>
    <script src="./js/bootstrap.js"></script>
 </body>
 

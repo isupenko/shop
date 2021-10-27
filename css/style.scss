@@ -180,6 +180,18 @@ body {
 			color: #fff;
 		}
 	}
+	&_main {
+		transition: all 0.3s ease 0s;
+		border: 1px solid $grayColor;
+		padding: 10px 20px;
+		color: $grayColor;
+		background-color: #fff;
+		&:hover {
+			background-color: $redColor;
+			color: #fff;
+			border: 1px solid $redColor;
+		}
+	}
 
 	&_trp {
 		font-weight: 700;
@@ -1656,11 +1668,28 @@ textarea.input {
 }
 
 .arrivals-catalog {
+
+	&__body {
+		padding: 0 25px;
+		@include _480 {
+			padding: 0;
+		}
+	}
+
 	&__list {
 		display: grid;
 		gap: 30px;
 		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 	}
+}
 
+.catalog__pages {
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+}
+
+a {
+	text-decoration: none;
 }
 //++++++++++++++++++++++++++ /catalog +++++++++++++++++++++++++
