@@ -15,14 +15,24 @@
       <div class="container">
          <div class="header__body">
             <div class="header__box">
-               <a href="#" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38" alt="logo"></a>
+               <a href="index.html" class="logo"><img class="logo__img" src="img/logo.png" width="44" height="38"
+                     alt="logo"></a>
                <button type="button" class="header__search _icon-search"></button>
+               <div class="search-form">
+                  <form action="" method="" name="search_form" class="search-form__item">
+                     <fieldset>
+                        <legend class="visually-hidden">Форма поиска</legend>
+                        <label><input class="search-form__input" type="text" name="form[]"
+                              placeholder="Search for minimalist chair"></label>
+                     </fieldset>
+                  </form>
+               </div>
             </div>
             <div class="header__box">
                <button type="button" id="burger" class="menu _icon-burger"></button>
                <a href="#" class="header__user _icon-user"></a>
                <div class="header__cart cart-header">
-                  <a href="#" class="cart-header__icon _icon-cart"></a>
+                  <a href="cart.html" class="cart-header__icon _icon-cart"><span>5</span></a>
                   <div class="cart-header__body">
                      <ul class="cart-header__list"></ul>
                   </div>
@@ -106,10 +116,11 @@
             <div class="cart__product">
                <ul class="cart__list">
                   <li class="cart__item">
-                     <div class="cart__img _ibg">
+                     <div class="cart__img">
                         <img src="img/arrivals/arrival-3.jpg" alt="product">
                      </div>
-                     <div class="cart__description">
+                     <div class="cart__description description-cart">
+                        <button type="button" class="description-cart__ico _icon-close"></button>
                         <div class="description-cart__title">mango people <br>t-shirt</div>
                         <div class="description-cart__text">
                            <p>Price: <span>$300</span></p>
@@ -120,10 +131,11 @@
                      </div>
                   </li>
                   <li class="cart__item">
-                     <div class="cart__img _ibg">
+                     <div class="cart__img">
                         <img class="" src="img/arrivals/arrival-2.jpg" alt="product">
                      </div>
-                     <div class="cart__description">
+                     <div class="cart__description description-cart">
+                        <button type="button" class="description-cart__ico _icon-close"></button>
                         <div class="description-cart__title">mango people <br>t-shirt</div>
                         <div class="description-cart__text">
                            <p>Price: <span>$300</span></p>
@@ -135,8 +147,8 @@
                   </li>
                </ul>
                <div class="cart__btn">
-                  <button class="btn--white">CLEAR SHOPPING CART</button>
-                  <button class="btn--white">CONTINUE SHOPPING</button>
+                  <button class="btn_main txt-uppercase">clear shopping cart</button>
+                  <button class="btn_main txt-uppercase">continue shopping</button>
                </div>
             </div>
 
@@ -144,7 +156,7 @@
                <div class="cart__form form-cart">
                   <form action="">
                      <fieldset>
-                        <legend">SHIPPING ADRESS</legend>
+                        <legend class="txt-uppercase">shipping adress</legend>
                            <label><input class="input form-cart__input" type="text" name="Bangladesh"
                                  placeholder="Bangladesh"></label>
                            <label><input class="input form-cart__input" type="text" name="State"
@@ -153,14 +165,14 @@
                                  placeholder="Postcode / Zip"></label>
                      </fieldset>
                   </form>
-                  <button class="btn--white">GET A QUOTE</button>
+                  <button class="btn_main txt-uppercase">get a quote</button>
                </div>
                <div class="cart__checkout checkout-cart">
                   <div class="checkout-cart__text">
                      <p class="checkout-cart__sub-title">sub total <span>$900</span></p>
                      <p class="checkout-cart__title">grand total <span>$900</span></p>
                   </div>
-                  <button class="btn checkout-cart__btn">PROCEED TO CHECKOUT</button>
+                  <button class="btn checkout-cart__btn">proceed to checkout</button>
                </div>
             </div>
          </section>
@@ -186,11 +198,11 @@
                      <p class="email-footer__text">for our newletter and promotion</p>
                      <div class="email-footer__form form-email">
                         <form action="" method="" name="contact_form">
-                           <fieldset>
+                           <fieldset class="form-email__body">
                               <legend class="visually-hidden">Контактная информация</legend>
                               <label><input class="form-email__input" type="text" name="email"
                                     placeholder="Ender Your Email"></label>
-                              <label><input class="form-email__submit btn--rad" type="submit" value="Subscribe"></label>
+                              <label><input class="form-email__submit btn_rad" type="submit" value="Subscribe"></label>
                            </fieldset>
                         </form>
                      </div>

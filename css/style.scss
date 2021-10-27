@@ -8,7 +8,7 @@ $fontSize: 14;
 //</Шрифт по умолчанию>==========================================================================================
 
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
-$minWidth: 320px;
+$minWidth: 320;
 $maxWidth: 1600;
 $maxWidthContainer: 1140;
 $md1: $maxWidthContainer + 12;
@@ -158,10 +158,10 @@ body {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0px 20px;
+	padding: 10px 20px;
 	text-align: center;
 	transition: all 0.3s ease 0s;
-	min-height: 45px;
+	//min-height: 48px;
 	background-color: $redColor;
 	color: #fff;
 	border: 1px solid transparent;
@@ -170,20 +170,44 @@ body {
 		color: $redColor;
 		border: 1px solid $redColor;
 	}
-	&--white {
-		min-height: 45px;
-		color: #A4A4A4;
-		background-color: #fff;
-		border: 1px solid #A4A4A4;
-		padding: 0px 30px;
+	&_white {
 		transition: all 0.3s ease 0s;
+		padding: 10px 20px;
+		color: $redColor;
+		background-color: #fff;
 		&:hover {
 			background-color: $redColor;
 			color: #fff;
-			border: 1px solid transparent;
 		}
 	}
-	&--rad {
+	&_main {
+		transition: all 0.3s ease 0s;
+		border: 1px solid $grayColor;
+		padding: 10px 20px;
+		color: $grayColor;
+		background-color: #fff;
+		&:hover {
+			background-color: $redColor;
+			color: #fff;
+			border: 1px solid $redColor;
+		}
+	}
+
+	&_trp {
+		font-weight: 700;
+		transition: all 0.3s ease 0s;
+		padding: 10px 20px;
+		color: #fff;
+		background-color: transparent;
+		border: 1px solid #fff;
+		&:hover {
+			color: $redColor;
+			border: 1px solid #fff;
+			background: rgba(255, 255, 255, 0.9);
+		}
+	}
+
+	&_rad {
 		transition: box-shadow 0.3s ease 0s;
 		margin-left: -3px;
 		width: 104px;
@@ -214,7 +238,7 @@ body {
 		background-color: $redColor;
 		border: 1px solid transparent;
 	}
-	&--text {
+	&_text {
 		margin-left: 10px;
 		font-size: 14px;
 	}
@@ -322,6 +346,8 @@ textarea.input {
 	display: block;
 }
 
+@import "media_mixin.scss";
+
 //</Стили обьектов>==================================================================================
 
 //============================== header ====================================
@@ -341,6 +367,7 @@ textarea.input {
 
 	&__box {
 		display: flex;
+		align-items: center;
 	}
 
 	&__search {
@@ -350,6 +377,9 @@ textarea.input {
 		transition: color 0.3s ease 0s;
 		&:hover {
 			color: $redColor;
+		}
+		@include _480 {
+			display: none;
 		}
 	}
 
@@ -375,7 +405,33 @@ textarea.input {
 	margin-top: -5px;
 }
 
-.logo__img {
+.search-form {
+	&._active {
+		.search-form__input {
+			opacity: 1;
+			visibility: visible;
+			top: 100%;
+		}
+	}
+	
+	&__item {
+		margin-left: 10px;
+	}
+	&__input {
+		width: 400px;
+		height: 46px;
+		background-color: #e1e1e1;
+		border-radius: 23px;
+		padding: 0 30px;
+		opacity: 0;
+		visibility: hidden;
+		@include _768 {
+			width: 140px;
+		}
+		@include _480 {
+			display: none;
+		}
+	}
 }
 
 .menu {
@@ -389,12 +445,27 @@ textarea.input {
 }
 .cart-header {
 	&__icon {
+		position: relative;
 		font-size: 28px;
 		color: #e8e8e8;
 		margin-left: 33px;
 		transition: color 0.3s ease 0s;
 		&:hover {
 			color: $redColor;
+		}
+		span {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			top: -7px;
+			right: -7px;
+			background-color: $redColor;
+			color: #fff;
+			font-size: 12px;
 		}
 	}
 
@@ -413,7 +484,7 @@ textarea.input {
 	top: 75px;
 	background-color: #fff;
 	z-index: 10;
-	&--show {
+	&_show {
 		display: block;
 	}
 
@@ -422,7 +493,7 @@ textarea.input {
 		right: 16px;
 		top: 16px;
 		&_icon-close {
-			color: #6F6E6E;
+			color: #6f6e6e;
 		}
 	}
 
@@ -445,7 +516,7 @@ textarea.input {
 	&__sub-title {
 		font-size: 14px;
 		line-height: 17px;
-		color: #F16D7F;
+		color: #f16d7f;
 		text-transform: uppercase;
 		margin: 10px 0;
 	}
@@ -456,7 +527,6 @@ textarea.input {
 
 	&__sub-item {
 		padding: 6px 0;
-		
 	}
 
 	&__sub-link {
@@ -464,7 +534,7 @@ textarea.input {
 		position: relative;
 		font-size: 14px;
 		line-height: 17px;
-		color: #6F6E6E;
+		color: #6f6e6e;
 		&::after {
 			content: "";
 			width: 0px;
@@ -474,7 +544,7 @@ textarea.input {
 			bottom: 0px;
 			left: 0;
 			z-index: 1;
-			transition: width .1s linear;
+			transition: width 0.1s linear;
 		}
 		&:hover {
 			color: #000;
@@ -492,15 +562,28 @@ textarea.input {
 	background-color: #f1e4e6;
 
 	&__body {
-		height: 764px;
+		//height: 764px;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 	&__img {
-		margin-left: -160px;
+		//padding: 0 0 69% 0;
+		//max-width: 100%;
+	}
+
+	&__image {
+		max-width: 100%;
+		@include _768 {
+			margin-left: 50px;
+		}
+		@include _480 {
+			display: none;
+		}
 	}
 
 	&__title {
+		padding-right: 100px;
 		position: relative;
 		font-weight: 900;
 		font-size: 48px;
@@ -508,27 +591,49 @@ textarea.input {
 		color: #222222;
 		text-transform: uppercase;
 		display: inline-block;
+		white-space: nowrap;
 		&::after {
 			content: "";
 			width: 12px;
-			height: 92px;
+			height: 88px;
 			background-color: #f16d7f;
 			position: absolute;
-			top: -10px;
+			top: -7px;
 			left: -25px;
 			z-index: 1;
+			@include _480 {
+				top: 40px;
+			}
+		}
+		@include _992 {
+			padding-right: 0px;
+			margin-left: 125px;
+		}
+		@include _768 {
+			font-size: 40px;
+		}
+		@include _480 {
+			padding: 50px 0;
+			margin-left: 0;
 		}
 	}
 
 	&__sub-title {
 		font-weight: 700;
 		font-size: 32px;
-
-		&--red {
+		@include _768 {
+			font-size: 24px;
+		}
+		&_red {
 			color: #f16d7f;
+			@include _768 {
+				font-size: 20px;
+			}
 		}
 	}
 }
+
+//==============================sale================================
 .sale {
 	&__body {
 		margin-top: 65px;
@@ -538,26 +643,66 @@ textarea.input {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		@include _480 {
+			flex-direction: column;
+		}
+		/*display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(1, 260px);
+		gap: 30px;
+		@include _768 {
+			gap: 20px;
+		}*/
 	}
 
 	&__item {
-		width: 360px;
+		/*&:nth-child(4) {
+			grid-column: 1/4;
+			height: 180px;
+		}
+		@include _480 {
+			&:nth-child(1) {
+				grid-column: 1/4;
+				//height: 220px;
+			}
+			&:nth-child(2) {
+				grid-column: 1/4;
+				height: 220px;
+			}
+			&:nth-child(3) {
+				grid-column: 1/4;
+				height: 220px;
+			}
+		}*/
+		width: 32%;
 		height: 260px;
+		@include _480 {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 		//border: 1px solid #000;
-		&--men {
+		&_men {
 			background: url(../img/men.jpg) no-repeat;
+			background-position: center;
 		}
-		&--woman {
+		&_woman {
 			background: url(../img/woman.jpg) no-repeat;
+			background-position: center;
 		}
-		&--kids {
+		&_kids {
 			background: url(../img/kids.jpg) no-repeat;
+			background-position: center;
 		}
-		&--long {
+		&_long {
 			background: url(../img/accesories.jpg);
+			background-position: center;
 			width: 1140px;
 			height: 180px;
 			margin-top: 20px;
+			@include _480 {
+				width: 100%;
+				margin-top: 0;
+			}
 		}
 	}
 
@@ -579,6 +724,7 @@ textarea.input {
 		text-align: center;
 		color: #ffffff;
 		text-transform: uppercase;
+		white-space: nowrap;
 	}
 
 	&__sub-title {
@@ -592,8 +738,13 @@ textarea.input {
 		text-align: center;
 		color: #f16d7f;
 		text-transform: uppercase;
+		white-space: nowrap;
+		@include _768 {
+			font-size: 18px;
+		}
 	}
 }
+//======================/sale========================
 
 //======================fetured========================
 
@@ -623,78 +774,144 @@ textarea.input {
 	}
 
 	&__list {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		display: grid;
+		gap: 30px;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 	}
 
-	&__item {
-		width: 360px;
-		height: 580px;
-		margin: 30px 0;
+	&__btn {
+		margin: 48px 0 90px 0;
+		text-align: center;
+	}
+}
+
+.card-product {
+	background: #f8f8f8;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	&:hover {
+		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+		.card-product__btn {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__labels {
+		position: absolute;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		right: 24px;
+		top: 24px;
+	}
+
+	&__label {
+		flex: 0 0 48px;
+		width: 48px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		&_sale {
+			background: $redColor;
+		}
+		&_new {
+			background: #ee1212;
+		}
+		&_hit {
+			background: #921b2b;
+		}
 	}
 
 	&__link {
-		display: block;
-		background: #f8f8f8;
-	}
-
-	&__img {
 		position: relative;
-		&::before {
-			content: "";
+		transition: all 0.3s ease 0s;
+		//padding: 0 0 420px / 360px * 100% 0;
+		img {
 			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.5);
+		}
+		&:hover {	
+			&::before {
+			content: "";
 			position: absolute;
 			top: 0;
-			display: none;
-		}
-		&:hover {
-			.item__btn {
-				display: block;
-			}
-			&::before {
-				display: block;
+			width: 100%;
+			height: 100%;
+			background: rgba(58, 56, 56, 0.86);
 			}
 		}
 	}
+		
 
-	&__sub-title {
-		text-transform: uppercase;
+	&__body {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		padding: 25px 18px 20px 18px;
+	}
+
+	&__content {
+		flex: 1 1 auto;
+	}
+
+	&__title {
+		font-weight: 700;
 		font-size: 13px;
 		line-height: 16px;
 		color: #000000;
-		padding: 25px 0 12px 18px;
+		padding: 0 0 12px 0;
+		text-transform: uppercase;
 	}
 
-	&__sub-text {
+	&__text {
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 17px;
-		padding: 0 18px;
 		color: #5d5d5d;
+		padding: 0 0 18px 0;
 	}
 
 	&__price {
 		font-size: 16px;
 		line-height: 19px;
-		color: #f16d7f;
-		padding: 18px;
+		color: $redColor;
 	}
 
 	&__btn {
-		text-align: center;
-		margin-bottom: 95px;
+		opacity: 0;
+		visibility: hidden;
+		min-height: 43px;
+		position: absolute;
+		top: 40%;  
+		left: 50%;
+		transform: translate(-50%, -50%);
+		&::before {
+			margin-right: 10px;
+			font-size: 18px;
+		}
+		&:hover {
+			box-shadow: 0px 0px 15px #fff;
+		}
 	}
 }
 
+//===========================skills=============================
 .skills {
 	width: 100%;
 	min-height: 341px;
 	background: #222224;
 	&__body {
 		padding: 90px 10px;
+		@include _768 {
+			padding: 0;
+		}
 	}
 
 	&__title {
@@ -705,9 +922,22 @@ textarea.input {
 		justify-content: space-evenly;
 		align-items: center;
 		text-align: center;
+		@include _768 {
+			flex-direction: column;
+			padding: 50px 100px;
+		}
+		@include _480 {
+			padding: 50px 0px;
+		}
 	}
 
 	&__item {
+		padding: 0 20px;
+		@include _768 {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
 	}
 
 	&__ico {
@@ -738,9 +968,10 @@ textarea.input {
 .footer {
 	&__top {
 		width: 100%;
-		min-height: 448px;
+		//min-height: 448px;
 		background: url(../img/footer-bg.jpg) no-repeat top center;
 		background-size: cover;
+		background-position: left;
 	}
 
 	&__bottom {
@@ -749,13 +980,18 @@ textarea.input {
 .top-footer {
 	&__body {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
+		padding: 86px 0;
+		@include _768 {
+			flex-direction: column;
+			justify-content: space-around;
+		}
 	}
 
 	&__comment {
-		width: 360px;
-		height: 448px;
+		max-width: 360px;
+		//height: 448px;
 		display: flex;
 		align-items: center;
 	}
@@ -776,6 +1012,9 @@ textarea.input {
 		line-height: 24px;
 		text-align: center;
 		color: #222224;
+		@include _480 {
+			font-size: 22px;
+		}
 	}
 }
 .email-footer {
@@ -788,7 +1027,10 @@ textarea.input {
 		text-align: center;
 		color: #222224;
 		text-transform: uppercase;
-		margin-bottom: 15px;
+		margin-bottom: 5px;
+		@include _768 {
+			padding-top: 50px;
+		}
 	}
 
 	&__text {
@@ -802,6 +1044,10 @@ textarea.input {
 }
 
 .form-email {
+	@include _480 {
+		display: flex;
+		justify-content: center;
+	}
 	&__input {
 		width: 256px;
 		height: 46px;
@@ -809,9 +1055,10 @@ textarea.input {
 		border-radius: 23px 0 0 23px;
 		padding: 0 30px;
 		//display: block;
-	}
-
-	&__submit {
+		@include _480 {
+			max-width: 185px;
+			padding: 0 10px;
+		}
 	}
 }
 
@@ -824,6 +1071,10 @@ textarea.input {
 		justify-content: space-between;
 		align-items: center;
 		height: 79px;
+		@include _480 {
+			flex-direction: column-reverse;
+			padding-top: 30px;
+		}
 	}
 
 	&__text {
@@ -854,19 +1105,21 @@ textarea.input {
 
 //++++++++++++++++++++++++ registration+++++++++++++++++++++++++
 .registration {
-
 	&__head {
 		width: 100%;
 		height: 148px;
-		background: #F8F3F4;
+		background: #f8f3f4;
 	}
 
 	&__title {
 		font-size: 24px;
 		line-height: 29px;
-		color: #F16D7F;
+		color: #f16d7f;
 		text-transform: uppercase;
 		line-height: 148px;
+		@include _480 {
+			text-align: center;
+		}
 	}
 
 	&__form {
@@ -875,20 +1128,21 @@ textarea.input {
 .container {
 }
 .form-registration {
-
 	&__wrp {
-		margin: 65px 0 96px 0;
+		margin: 65px 0;
 		display: flex;
-
+		@include _480 {
+			flex-direction: column;
+		}
 	}
 
 	&__body {
-		flex: 0 1 560px;
+		//flex: 0 1 560px;
 	}
 
 	&__input {
 		height: 45px;
-		border: 1px solid #A4A4A4;
+		border: 1px solid #a4a4a4;
 		margin: 20px 0;
 	}
 
@@ -899,11 +1153,11 @@ textarea.input {
 		font-weight: 300;
 		font-size: 13px;
 		line-height: 16px;
-		color: #B1B1B1;
+		color: #b1b1b1;
 	}
 
 	&__btn {
-		margin-top: 40px;
+		margin: 40px 0;
 		text-transform: uppercase;
 		span {
 			margin-left: 20px;
@@ -918,11 +1172,15 @@ textarea.input {
 .radio-input {
 	margin-right: 15px;
 }
-#male, #female {
+#male,
+#female {
 	margin-right: 4px;
 }
 .txt-reg {
 	margin-left: 120px;
+	@include _992 {
+		margin-left: 20px;
+	}
 
 	&__title {
 		font-weight: 300;
@@ -938,14 +1196,15 @@ textarea.input {
 		font-size: 20px;
 		line-height: 29px;
 		color: #000000;
+		@include _992 {
+			font-size: 16px;
+		}
 	}
 
 	&__condition {
-
 	}
 
 	&__list {
-		
 	}
 
 	&__item {
@@ -954,6 +1213,10 @@ textarea.input {
 		font-size: 20px;
 		line-height: 29px;
 		color: #000000;
+		@include _992 {
+			font-size: 16px;
+			padding: 10px 0;
+		}
 		span {
 			margin-left: 25px;
 		}
@@ -967,21 +1230,27 @@ textarea.input {
 	&__head {
 		width: 100%;
 		height: 148px;
-		background: #F8F3F4;
+		background: #f8f3f4;
 	}
 
 	&__title {
 		font-size: 24px;
 		line-height: 29px;
-		color: #F16D7F;
+		color: #f16d7f;
 		text-transform: uppercase;
 		line-height: 148px;
+		@include _480 {
+			text-align: center;
+		}
 	}
 
 	&__body {
 		display: flex;
+		justify-content: space-between;
 		margin: 50px 0;
-		//justify-content: space-between;
+		@include _768 {
+			flex-direction: column;
+		}
 	}
 
 	&__product {
@@ -993,35 +1262,64 @@ textarea.input {
 
 	&__item {
 		display: flex;
-		width: 652px;
-		height: 306px;
+		//max-width: 662px;
+		//height: 306px;
 		//border: 1px solid #222222;
 		margin-top: 40px;
-		box-shadow: 20px 20px 20px rgba(0,0,0,0.2)
+		box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
 	}
 
 	&__img {
-		width: 262px;
-		height: 306px;
+		flex: 0 0 262px;
+		img {
+			max-width: 100%;
+			//object-fit: contain;
+		}
+		@include _480 {
+			flex: 0 0 180px;
+		}
 	}
 
 	&__description {
-		padding: 22px 0px 0 31px; 
+		//flex: 1 1 500px;
+		padding: 30px 0px 0 31px;
+		@include _480 {
+			padding-left: 5px;
+		}
 	}
 
 	&__btn {
 		display: flex;
 		justify-content: space-between;
 		margin: 80px 0;
+		@include _768 {
+			justify-content: space-around;
+			padding: 0 30px;
+		}
+		@include _480 {
+			padding: 0;
+		}
 	}
 
 	&__reg {
-		margin-left: 120px;
-		width: 100%;
+		margin-left: 40px;
+		@include _768 {
+			display: flex;
+			justify-content: space-between;
+			margin-left: 0px;
+		}
+		@include _480 {
+			flex-direction: column;
+		}
 	}
 
 	&__form {
 		margin-top: 40px;
+		@include _768 {
+			margin-top: 0px;
+			width: 100%;
+			margin-right: 30px;
+		}
 	}
 
 	&__checkout {
@@ -1031,13 +1329,25 @@ textarea.input {
 }
 
 .description-cart {
-
+	position: relative;
+	width: 100%;
+	&__ico {
+		position: absolute;
+		right: 16px;
+		top: 16px;
+		color: #6f6e6e;
+	}
 	&__title {
 		font-size: 24px;
 		line-height: 29px;
 		color: #222222;
 		text-transform: uppercase;
-		margin-bottom: 42px;
+		margin-bottom: 35px;
+		@include _480 {
+			font-size: 18px;
+			margin-bottom: 10px;
+			line-height: 22px;
+		}
 	}
 
 	&__text {
@@ -1049,6 +1359,13 @@ textarea.input {
 		}
 		p {
 			padding: 3px 0;
+			@include _480 {
+				padding: 0;
+			}
+		}
+		@include _480 {
+			font-size: 16px;
+			line-height: 20px;
 		}
 	}
 }
@@ -1057,14 +1374,21 @@ textarea.input {
 	&__input {
 		width: 100%;
 		height: 45px;
-		border: 1px solid #A4A4A4;
+		border: 1px solid #a4a4a4;
 		margin: 20px 0;
 	}
 }
 .checkout-cart {
 	width: 100%;
 	min-height: 214px;
-	background-color: #F5F3F3;
+	background-color: #f5f3f3;
+	@include _768 {
+		width: 500px;
+		margin-top: 30px;
+	}
+	@include _480 {
+		width: 100%;
+	}
 
 	&__text {
 		text-align: right;
@@ -1073,7 +1397,7 @@ textarea.input {
 	&__sub-title {
 		font-size: 11px;
 		line-height: 13px;
-		color: #4A4A4A;
+		color: #4a4a4a;
 	}
 
 	&__title {
@@ -1083,13 +1407,289 @@ textarea.input {
 		line-height: 19px;
 		color: #222222;
 		text-transform: uppercase;
-		border-bottom: 1px solid #E2E2E2;
+		border-bottom: 1px solid #e2e2e2;
 	}
 
 	&__btn {
 		width: 100%;
 		margin-top: 20px;
+		text-transform: uppercase;
 	}
 }
 
+.txt-uppercase {
+	text-transform: uppercase;
+}
+
 //+++++++++++++++++++++++++/cart++++++++++++++++++++++++
+
+//+++++++++++++++++++++++++++ product ++++++++++++++++++++++++++
+.product {
+	&__carousel {
+		//padding: 50px 0;
+	}
+
+	&__bread {
+		width: 100%;
+		min-height: 148px;
+	}
+
+	&__breadcrumb {
+		//display: flex;
+		justify-content: flex-end;
+	}
+
+	&__breadcrumb-item {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: #636363;
+		text-transform: uppercase;
+		&_active {
+			text-transform: uppercase;
+			color: $redColor;
+		}
+	}
+
+	&__breadcrumb-link {
+		font-size: 14px;
+		line-height: 17px;
+		color: #636363;
+		&:hover {
+			color: $redColor;
+		}
+	}
+
+	&__btn {
+		margin-left: 10px;
+		color: $redColor;
+		margin: 50px 0;
+		border: 1px solid $redColor;
+		font-size: 16px;
+		&::before {
+			margin-right: 10px;
+		}
+	}
+
+	&__filter {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+		@include _480 {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__color {
+		font-size: 14px;
+		line-height: 17px;
+		color: #6f6e6e;
+		text-transform: uppercase;
+		&:hover {
+			color: $redColor;
+		}
+	}
+	&__catalog {
+		margin: 100px 0;
+	}
+}
+
+@include _992 {
+	.fetured__item-none {
+		display: none;
+	}
+}
+
+.carousel-control-next {
+	transform: rotate(180deg);
+}
+._icon-arrow_left {
+	font-size: 50px;
+	color: #000;
+	&:hover {
+		color: $redColor;
+	}
+}
+
+.bread {
+	background: #f8f3f4;
+
+	&__body {
+		min-height: 148px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include _480 {
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 29px;
+		color: #f16d7f;
+		text-transform: uppercase;
+	}
+}
+
+.item-product {
+	max-width: 1140px;
+	min-height: 600px;
+	background-color: #fff;
+	margin: 0px auto;
+	border: 2px solid #dfdfdf;
+	text-align: center;
+	z-index: 2;
+	position: relative;
+	top: -30px;
+
+	&__txt {
+		max-width: 640px;
+		margin: 0 auto;
+		border-bottom: 1px solid #eaeaea;
+	}
+
+	&__title {
+		display: inline-block;
+		position: relative;
+		margin-top: 65px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $redColor;
+		text-transform: uppercase;
+		&::before {
+			content: "";
+			width: 63px;
+			height: 3px;
+			background-color: $redColor;
+			position: absolute;
+			top: 30px;
+			left: 43px;
+		}
+	}
+
+	&__sub-title {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 22px;
+		color: #4d4d4d;
+		text-transform: uppercase;
+		margin: 30px 0 48px 0;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: #5e5e5e;
+		//padding: 0 280px;
+	}
+
+	&__price {
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		color: #ef5b70;
+		margin: 32px 0 60px 0;
+	}
+}
+//++++++++++++++++++++++++++ /product ++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++ catalog +++++++++++++++++++++++++
+.catalog {
+	&__head {
+		min-height: 148px;
+		background: #F8F3F4;
+	}
+}
+
+.bread {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 148px;
+	@include _480 {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	&__list {
+		display: flex;
+	}
+	&__item {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $redColor;
+		text-transform: uppercase;
+		&_active {
+			font-weight: 700;
+		}
+	}
+
+	&__link {
+		color: #636363;
+	}
+}
+
+.filter-catalog {
+	margin: 50px 0;
+	display: flex;
+	justify-content: space-between;
+
+	&__wrp {
+		display: flex;
+		align-items: center;
+		
+	}
+	&__title {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		color: #000000;
+	}
+
+	&__btn {
+		padding: 0 10px;
+		&:hover {
+			color: $redColor;
+		}
+	}
+
+	&__body {
+		margin-right: 350px;
+		@include _768 {
+			margin-right: 20px
+		}
+	}
+}
+
+.arrivals-catalog {
+
+	&__body {
+		padding: 0 25px;
+		@include _480 {
+			padding: 0;
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: 30px;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+	}
+}
+
+.catalog__pages {
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+}
+
+a {
+	text-decoration: none;
+}
+//++++++++++++++++++++++++++ /catalog +++++++++++++++++++++++++
